@@ -1,7 +1,9 @@
 <!-- docs/_sidebar.md  定制侧边栏 -->
 
-* [首页](/)
-* [java](java/)
-* [vue](vue/)
-* [Home](/)
-* [Guide](vue/README.md "The greatest guide in the world")
+<!-- * [首页](/ "一个不会编程的程序员") -->
+* [windows软件](windows/ "一个不会编程的程序员")
+<!-- * [mac软件](mac/ "一个不会编程的程序员") -->
+* [Github推荐](GitHub/ "一个不会编程的程序员")
+<!-- * [test](test/ "一个不会编程的程序员") -->
+<!-- * [vue](vue/ "一个不会编程的程序员") -->
+<!-- * [Guide](vue/README "一个不会编程的程序员") -->
