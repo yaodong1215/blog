@@ -13,12 +13,12 @@
 - 网站内容会持续保持更新，欢迎收藏品鉴！
 
 
-<span id="busuanzi_container_site_pv" style="display: inline;">
-    👁️本页总访问次数:<span id="busuanzi_value_site_pv"></span> 
+<!-- <span id="busuanzi_container_site_pv" style='display:inline'>
+    👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
-<span id="busuanzi_container_site_uv" style="display: inline;"> 
-    | 🧑总访客数: <span id="busuanzi_value_site_uv"></span>
-</span>
+<span id="busuanzi_container_site_uv" style='display:inline'>
+    | 🚴‍♂️ 本站总访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span> -->
 
 
 <!-- 按钮 -->

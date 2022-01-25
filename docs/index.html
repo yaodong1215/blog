@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>一个不会编程的程序员</title>
-    <link rel="icon" href="_media/favicon.ico" />
-    <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages"/>
-    <meta name="description" content="A magical documentation generator." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+<head>
+  <meta charset="UTF-8" />
+  <title>一个不会编程的程序员</title>
+  <link rel="icon" href="_media/favicon.ico" />
+  <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages"/>
+  <meta name="description" content="A magical documentation generator." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+ 
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" title="dark" disabled />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css" title="buble" disabled/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/pure.css" title="pure" disabled />
 
-	
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" title="dark" disabled />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css" title="buble" disabled/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/pure.css" title="pure" disabled />
-    <!-- <style> -->
-      <!-- nav.app-nav li ul { -->
-        <!-- min-width: 100px; -->
-      <!-- } -->
+  <!-- 支持 LaTex 语言 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://wugenqiang.js.org/src/css/iconfont.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/custom.css">
+  <!-- alert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sweetalert.min.css" type='text/css' media='all' />
+  <!-- 友链 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/css/friends-link.css">
+  <!-- 自定义特色样式：by myself -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/css/me.css">
 
-      <!-- #carbonads { -->
-        <!-- box-shadow: none !important; -->
-        <!-- width: auto !important; -->
-      <!-- } -->
+  <!-- <style> -->
+    <!-- nav.app-nav li ul { -->
+    <!-- min-width: 100px; -->
+    <!-- } -->
+
+    <!-- #carbonads { -->
+    <!-- box-shadow: none !important; -->
+    <!-- width: auto !important; -->
+    <!-- } -->
     <!-- </style> -->
-	<style>
+    <style>
 
-    .markdown-section strong {
+   /* .markdown-section strong {
       color: rgb(239, 112, 96);
-    }
+    }*/
 
     .app-nav{
       position: fixed;
@@ -40,6 +51,11 @@
       background-color: #fff;
       height: 55px;
       <!-- border-bottom: 1px solid #eee; -->
+    }
+    .app-sub-sidebar li:before {
+      content: "";
+      padding-right: 4px;
+      float: left;
     }
 
 
@@ -298,6 +314,10 @@
       margin-bottom: 10px;
     }
 
+   /* element.style {
+        display: inline; 
+    }*/
+
     /*滚动条样式 start*/
     /* 滚动条宽度 */
     ::-webkit-scrollbar{width:5px;}
@@ -308,13 +328,46 @@
       border-radius: 2em;
     }
 
-  </style>
-  </head>
 
-  <body>
-    <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
-    <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
-    <script>
+ /*   .goup-container {
+      position: fixed !important;;
+      width: 128px !important;;
+      height: 25px !important;;
+      background: rgb(66, 185, 131) !important;;
+      cursor: pointer !important;;
+      z-index: 1 !important;;
+      bottom: 40px !important;;
+      right: 25px !important;;
+      border-radius: 0px !important;;
+    }
+    .goup-arrow {
+        width: 0px !important;;
+        height: 0px !important;;
+        margin: 0px auto !important;;
+        padding-top: 7px !important;;
+        border-style: solid !important;;
+        border-width: 0px 10px 10px !important;;
+        border-color: transparent transparent rgb(255, 255, 255) !important;;
+    }*/
+
+  </style>
+</head>
+
+<body>
+  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1/index.js"></script>
+
+<!-- <div class="aside_container">
+    <div class="advertisement">
+      <div class="Tencent_code">
+        <h4>关注作者公众号</h4>
+        <p style="font-size: 12px;">万千小伙伴陪你一起学</p>
+        <img src="https://cdn.jsdelivr.net/gh/wugenqiang/PictureBed/images01/20200808182633.jpg" alt="EnjoyToShare" />
+      </div>
+    </div>
+</div> -->
+
+  <script>
       // Set html "lang" attribute based on URL
       var lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
       if (lang) {
@@ -325,61 +378,61 @@
         name: '一个不会编程的程序员',//侧边栏标题
         repo: 'yaodong1215',//GitHub地址
         loadNavbar: true,//定制导航栏
-		el: '#app',
-		homepage: 'GitHub/README.md',//首页默认显示的内容
+        el: '#app',
+        homepage: 'GitHub/README.md',//首页默认显示的内容
         loadSidebar: true,// 侧边栏文档目录
         subMaxLevel: 5,//自动把标题层级转化为标题
         auto2top: true,// 跳转后自动到顶部
         coverpage: true,//首页
-		mergeNavbar: true,//小屏设备下合并导航栏到侧边栏
-		onlyCover: false,//只在访问主页时加载封面
-		notFoundPage: 'my404.md',//在找不到指定页面时加载
-		topMargin: 0, // default: 0
-		//logo: '/images/logpage.gif',//在侧边栏中出现的网站图标
+        mergeNavbar: true,//小屏设备下合并导航栏到侧边栏
+        onlyCover: false,//只在访问主页时加载封面
+        notFoundPage: 'my404.md',//在找不到指定页面时加载
+        topMargin: 0, // default: 0
+        //logo: '/images/logpage.gif',//在侧边栏中出现的网站图标
         // 全文搜索
         search: {
-		  maxAge: 2000, // 过期时间，单位毫秒，默认一天
+          maxAge: 2000, // 过期时间，单位毫秒，默认一天
           depth: 6,
           noData: "没有搜到!",
           placeholder: "搜索...",
           // 避免搜索索引冲突,同一域下的多个网站之间
           namespace: "website-1",
         },
-		//备案号显示插件
-		beian: {
-			ICP: "<span><a href='http://www.beian.gov.cn' style='font-size:80%;color:#939393;' target='_blank'>豫ICP备2022000493号-1</a></span>",
-			NISMSP: {
-				number: "<span><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' style='font-size:80%;color:#939393;' target='_blank'></a></span>",
-				url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=",
-			},
-		},
-		//效果插件
-		'flexible-alerts': {
-		  note: {
-			label: {
-			  '/de-DE/': 'Hinweis',
-			  '/': 'Note'
-			}
-		  },
-		  tip: {
-			label: {
-			  '/de-DE/': 'Tipp',
-			  '/': 'Tip'
-			}
-		  },
-		  warning: {
-			label: {
-			  '/de-DE/': 'Warnung',
-			  '/': 'Warning'
-			}
-		  },
-		  attention: {
-			label: {
-			  '/de-DE/': 'Achtung',
-			  '/': 'Attention'
-			}
-		  }
-		},
+        //备案号显示插件
+        beian: {
+          ICP: "<span><a href='http://www.beian.gov.cn' style='font-size:80%;color:#939393;' target='_blank'>豫ICP备2022000493号-1</a></span>",
+          NISMSP: {
+            number: "<span><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' style='font-size:80%;color:#939393;' target='_blank'></a></span>",
+            url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=",
+          },
+        },
+      //效果插件
+      'flexible-alerts': {
+        note: {
+          label: {
+            '/de-DE/': 'Hinweis',
+            '/': 'Note'
+          }
+        },
+        tip: {
+          label: {
+            '/de-DE/': 'Tipp',
+            '/': 'Tip'
+          }
+        },
+        warning: {
+          label: {
+            '/de-DE/': 'Warnung',
+            '/': 'Warning'
+          }
+        },
+        attention: {
+          label: {
+            '/de-DE/': 'Achtung',
+            '/': 'Attention'
+          }
+        }
+      },
         // // 底部导航
         // pagination: {
         //   previousText: "上一页",
@@ -389,170 +442,239 @@
         // },
         // 字数统计
         count: {
-           countable: true,
-           position: "top",
-           margin: "10px",
-           float: "right",
-           fontsize: "0.9em",
-           color: "red",
-           language: "chinese",
-           localization: {
-             words: "",
-             minute: "",
-           },
-           isExpected: true,
+         countable: true,
+         position: "top",
+         margin: "10px",
+         float: "right",
+         fontsize: "0.9em",
+         color: "red",
+         language: "chinese",
+         localization: {
+           words: "",
+           minute: "",
+         },
+         isExpected: true,
+       },
+       tabs: {
+          persist    : true,      // default
+          sync       : true,      // default
+          theme      : 'classic', // default
+          tabComments: true,      // default
+          tabHeadings: true       // default
         },
-		tabs: {
-		  persist    : true,      // default
-		  sync       : true,      // default
-		  theme      : 'classic', // default
-		  tabComments: true,      // default
-		  tabHeadings: true       // default
-		}
+        footer: {
+          copy: '<span id="sitetime"></span>',
+          auth: ' ',
+          pre: '<hr/>',
+          style: 'text-align: left;',
+        },//添加页脚
       };  
     </script>
-	
-	<style>
-	  :root {
-		--docsifytabs-border-color: #ededed;
-		--docsifytabs-tab-highlight-color: purple;
-	}
-	</style>
-	
-	
-    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-	<!--全文搜索--> 
-    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-	 <!-- 代码块样式优化-->
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-c.js"></script>
-	  <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-cpp.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-css.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-docker.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-java.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-javascript.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-json.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-latex.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-sql.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-markdown.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-bash.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-php.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-scala.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-nginx.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-json.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-markdown.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-python.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/js/prism-yaml.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/src/js/prism-go.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/src/js/prism-matlab.js"></script>
 
-	 <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
-	  <script>
-		((window.gitter = {}).chat = {}).options = {
-		  room: 'enjoytoshare/community2'
-		};
-	  </script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sidecar.v1.js" async defer></script>
-	
-	  <!-- 复制提醒 -->
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sweetalert.min.js"></script>
-	  <script>
-		document.body.oncopy = function () {
-		 swal("复制成功 🎉",
-				 "",
-				 "success"); };
-	  </script>
+    <style>
+    :root {
+      --docsifytabs-border-color: #ededed;
+      --docsifytabs-tab-highlight-color: purple;
+    }
+  </style>
 
 
-	<!-- 备案信息显示 -->  
-	<script src="https://cdn.jsdelivr.net/npm/docsify-beian@latest/dist/beian.min.js"></script>
-	<!-- emoji -->   
-	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-	<!-- 图片缩放 -->  
-	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-	<!-- 复制到剪贴板 -->   
-	<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-	<!--Java代码高亮-->   
-	<script src="//unpkg.com/prismjs/components/prism-java.js"></script>    
-	<script src="//unpkg.com/prismjs/components/prism-python.js"></script> 
-	<!-- 字数统计 -->    
-	<script src="//unpkg.com/docsify-count/dist/countable.js"></script>  
-	<!-- docsify-tabs (latest v1.x.x) -->
-	<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> 
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!--全文搜索--> 
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!-- 代码块样式优化-->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-c.js"></script>
+  <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-cpp.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-css.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-docker.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-java.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-json.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-latex.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-sql.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-php.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-scala.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-nginx.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-markdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/prism-python.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/js/prism-yaml.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/src/js/prism-go.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/src/js/prism-matlab.js"></script>
+  <!-- 备案信息显示 -->  
+  <script src="https://cdn.jsdelivr.net/npm/docsify-beian@latest/dist/beian.min.js"></script>
+  <!-- emoji -->   
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片缩放 -->  
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 复制到剪贴板 -->   
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script> -->
 
-	<!-- docsify-example-panels (latest)分栏 -->
-	<script src="https://cdn.jsdelivr.net/npm/docsify-example-panels"></script>
-	<!-- 访问量 -->
-	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	 <!-- 回到顶部功能 -->
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
-	  <script type="text/javascript">
-		$(document).ready(function () {
-		  $.goup({
-			trigger: 100,
-			bottomOffset: 52,
-			locationOffset: 25,
-			//title: 'TOP',
-			titleAsText: true
-		  });
-		});
-	  </script>
-	  <!-- 底层的样式 -->
-	  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-	  <script>
-		  L2Dwidget.init({
-			"model": {
-			  //jsonpath控制显示那个小萝莉模型，
-			  //(切换模型需要改动)
-			  jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
-			  "scale": 1
-			},
-			"display": {
-			  "position": "right", //看板娘的表现位置
-			  "width": 70,  //小萝莉的宽度
-			  "height": 140, //小萝莉的高度
-			  "hOffset": 35,
-			  "vOffset": -20
-			},
-			"mobile": {
-			  "show": true,
-			  "scale": 0.5
-			},
-			"react": {
-			  "opacityDefault": 0.7,
-			  "opacityOnHover": 0.2
-			}
-		  });
-	  </script>
-	<!-- plugins -->
-	<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!--Java代码高亮-->   
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>    
+  <script src="//unpkg.com/prismjs/components/prism-python.js"></script> 
+  <!-- 字数统计 -->    
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>  
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> 
+  <!-- docsify-example-panels (latest)分栏 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-example-panels"></script>
+  <!-- 访问量 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- 回到顶部功能 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
+  <!-- 支持 DOT 语言 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/viz.js"></script>
+  <!-- 支持 LaTex 语言 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- 添加 PDF 页面展示功能 -->
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/pdfobject.min.js"></script>
+  <!-- This is the source code of the pdf embed plugin -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/docsify-pdf-embed.js"></script>
+
+  <!-- 复制代码-->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/docsify-copy-code.min.js"></script>
+  <!-- mouse click -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/click_heart.js"></script>
+  <!-- 复制提醒 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sweetalert.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <!-- Latest -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 访问量统计 -->
+  <!-- <script async src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/js/busuanzi.pure.mini.js"></script> -->
+  <!-- 添加页脚 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/docsify-footer-enh.min.js"></script>
+
+
+  <!-- 添加网站运行时间统计 -->
+  <script language=javascript>
+    function siteTime() {
+     window.setTimeout("siteTime()", 1000);
+     var seconds = 1000;
+     var minutes = seconds * 60;
+     var hours = minutes * 60;
+     var days = hours * 24;
+     var years = days * 365;
+     var today = new Date();
+     var todayYear = today.getFullYear();
+     var todayMonth = today.getMonth() + 1;
+     var todayDate = today.getDate();
+     var todayHour = today.getHours();
+     var todayMinute = today.getMinutes();
+     var todaySecond = today.getSeconds();
+         /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+         year - 作为date对象的年份，为4位年份值
+         month - 0-11之间的整数，做为date对象的月份
+         day - 1-31之间的整数，做为date对象的天数
+         hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+         minutes - 0-59之间的整数，做为date对象的分钟数
+         seconds - 0-59之间的整数，做为date对象的秒数
+         microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+         var t1 = Date.UTC(2022, 01, 07, 10, 10, 00); //北京时间2019-06-21 22:22:22 //计划考研的日子，6月20日毕业典礼结束后，人生需要继续努力，加油，看到这句话的朋友们！
+         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+         var diff = t2 - t1;
+         var diffYears = Math.floor(diff / years);
+         var diffDays = Math.floor((diff / days) - diffYears * 365);
+         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+         document.getElementById("sitetime").innerHTML = " 本站已安全运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
+       }
+       siteTime();
+     </script>
+     <!-- 谷歌分析 -->
+     <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script> -->
+
+
+
+     <!-- 聊天室入口-->
+     <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sidecar.v1.js" async defer></script>
+     <!--使用 Gitter 实现一个 IM 即时通讯聊天室功能-->
+     <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'yaodong1215/community'
+      };
+    </script>
+    
+
+
+
+
+    <script>
+      document.body.oncopy = function () {
+       swal("复制成功 🎉",
+         "若要转载或引用请务必保留原文链接，并申明来源。",
+         "success"); };
+       </script>
+
+
+      <!-- 回到顶部 -->
+      <!--  <script type="text/javascript">
+        $(document).ready(function () {
+          $.goup({
+            trigger: 100,
+            bottomOffset: 40,
+            locationOffset: 25,
+            titleAsText: true
+          });
+        });
+      </script> -->
+
+<script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
+<!--<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>-->
+<!--  其他可选的模型： 
+        小帅哥： https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
+        萌娘：https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json 
+        小可爱（女）：https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json 
+        小可爱（男）：https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
+        初音：https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json 
+       -->
+<script>
+    L2Dwidget.init({
+        "model": {
+            "jsonPath": "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+　　        "scale": 1
+        },
+        "display": {
+            "position": "right",
+            "width": 150,
+            "height": 300,
+　　        "hOffset": 12,
+            "vOffset": 34
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.8,
+            "opacityOnHover": 1
+        },
+        "dialog": {
+            "enable": true,
+            "script": {
+                'tap body': '聊天功能上线！',
+                'tap face': '博客持续更新中。。。。',
+            }
+        }
+    });
+</script>
+
 <!-- <style>
-	/** 鼠标样式 开始**/
-	/** 普通指针样式**/ body {cursor: url(https://img.alicdn.com/imgextra/i4/3037771681/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png), default;}
-	/** 链接指针样式**/ a:hover{cursor:url(https://img.alicdn.com/imgextra/i4/3037771681/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png), pointer;}
-	/** 鼠标样式 结束**/
-	</style> -->
-    <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-	<!-- Latest -->
-	<script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
-	
-	
-	<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-
-	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-	<script>
-	  const gitalk = new Gitalk({
-		clientID: 'Github Application Client ID',
-		clientSecret: 'Github Application Client Secret',
-		repo: 'Github repo',
-		owner: 'Github repo owner',
-		admin: ['Github repo collaborators, only these guys can initialize github issues'],
-		// facebook-like distraction free mode
-		distractionFreeMode: false
-	  })
-	</script> -->
-  </body>
+  /** 鼠标样式 开始**/
+  /** 普通指针样式**/ body {cursor: url(https://img.alicdn.com/imgextra/i4/3037771681/TB2LdUrj9tkpuFjy0FhXXXQzFXa_!!3037771681.png), default;}
+  /** 链接指针样式**/ a:hover{cursor:url(https://img.alicdn.com/imgextra/i4/3037771681/TB2paoVj3JlpuFjSspjXXcT.pXa_!!3037771681.png), pointer;}
+  /** 鼠标样式 结束**/
+</style> -->
+</body>
 </html>
