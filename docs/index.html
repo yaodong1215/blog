@@ -663,6 +663,8 @@
         "dialog": {
             "enable": true,
             "script": {
+              //每20s，显示一言（调用一言Api返回的句子）
+                'every idle 20s': '$hitokoto$',
                 'tap body': '聊天功能上线！',
                 'tap face': '博客持续更新中。。。。',
             }
